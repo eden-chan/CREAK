@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<input type="button" value="start rapping" onclick="playBeat()">
+<br>
+	<h1>
+    Rap Session Screen
+  </h1>
+    <audio id="0" autoplay controls>
+      <source src="begin.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="1" autoplay controls>
+      <source src="med.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="2" autoplay controls>
+      <source src="advanced.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+      var myAudio = document.getElementbyId(Math.floor(Math.random() * 3));
+      function playBeat() {
+        myAudio.autoplay = true;
+        myAudio.load();
+        myAudio.play();
+      }
+    
+    </script>
+</body>
+</html>
